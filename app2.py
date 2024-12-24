@@ -59,7 +59,7 @@ def newton_raphson_roots(expr, guess=0.0, tolerance=1e-7, max_iter=1000):
         print(f"Erreur dans Newton-Raphson : {e}")
         return None
 
-SPRING_BOOT_API_URL = "http://localhost:8082/api/store-polynomial"  # URL de l'API Spring Boot
+SPRING_BOOT_API_URL = "http://spring-app:8082/api/store-polynomial"  # URL de l'API Spring Boot
 
 @app.route('/process_polynomial_new', methods=['POST'])
 def process_polynomial_new():
@@ -124,4 +124,4 @@ def process_polynomial_new():
         return jsonify({"error": f"Erreur lors du traitement : {str(e)}"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(host="0.0.0.0", port=5001, debug=True)
