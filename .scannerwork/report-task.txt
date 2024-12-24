@@ -1,0 +1,7 @@
+organization=noutailaa
+projectKey=MicroservNewton
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.58741
+dashboardUrl=https://sonarcloud.io/dashboard?id=MicroservNewton
+ceTaskId=AZP00sHbtVs9uHzNfUxx
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZP00sHbtVs9uHzNfUxx
