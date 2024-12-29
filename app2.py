@@ -59,7 +59,7 @@ def newton_raphson_roots(expr, guess=0.0, tolerance=1e-7, max_iter=1000):
         print(f"Erreur dans Newton-Raphson : {e}")
         return None
 
-SPRING_BOOT_API_URL = "http://spring-app:8082/api/store-polynomial"  # URL de l'API Spring Boot
+SPRING_BOOT_API_URL = "http://localhost:8082/api/store-polynomial"  # URL de l'API Spring Boot
 
 @app.route('/process_polynomial_new', methods=['POST'])
 def process_polynomial_new():
@@ -100,7 +100,7 @@ def process_polynomial_new():
                 roots.append(root)
 
         print(f"Racines trouvées : {roots}")
-
+    
         # Construire les résultats
         result = {
             "simplifiedExpression": simplified_str,
